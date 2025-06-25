@@ -1,0 +1,14 @@
+.login{
+    cursor: pointer;
+    background: linear-gradient(to right, #029eff, #06064f);
+    color: #ffffff;
+    padding: 8px 24px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+.login:hover{
+    transform: scale(1.05);
+}
