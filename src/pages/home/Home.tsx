@@ -2,8 +2,6 @@ import { useEffect } from "react"
 import { Header } from "../../components/header/Header"
 import { useNavigate } from "react-router-dom"
 import { apiController } from "../../controller/api.controller"
-import style from "./style.module.css"
-import { Iconify } from "../../components/iconify/Iconify"
 
 export const Home=()=>{
     const navigate = useNavigate()

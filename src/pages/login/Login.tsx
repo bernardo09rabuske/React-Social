@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Header } from "../../components/header/Header"
 import style from "./Lstyle.module.css"
 import { apiController } from "../../controller/api.controller"
@@ -30,7 +29,7 @@ export const Login=()=>{
          const res = await apiController.post("/login",loginData)
             console.log(res,"res do axios")
        if(res.data.token){
-            toast.success("Sucesso, login")
+            toast.success("Login efetuado com sucesso")
             localStorage.setItem("token",res.data.token)
             setTimeout(() => {
                 navigate("/")

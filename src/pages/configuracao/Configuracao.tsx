@@ -1,9 +1,6 @@
-import { useState } from "react"
-import { toast } from "react-toastify"
 import { Header } from "../../components/header/Header"
-import { apiController } from "../../controller/api.controller"
 import style from "./style.module.css"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export const Configuracao=()=>{
     const navigate = useNavigate()

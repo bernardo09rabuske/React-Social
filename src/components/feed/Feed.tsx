@@ -40,12 +40,36 @@ export const Feed=({idUsuario}:FeedProps)=>{
         getPosts()
     },[])
     return <section className={style.feed}>
+        <div className={style.divPai}>
+        <div className={style.div1}>
+          <p>0</p>
+          <p>Posts</p>
+        </div>
+        <div className={style.div}>
+          <p>0</p>
+          <p >seguidores</p>
+        </div>
+        <div className={style.div}>
+          <p>0</p>
+          <p>seguindo</p>
+        </div>
+        </div>
+        <div className={style.h1}>
+            <h1>Bernardo Rabuske</h1>
+            <h2 className={style.h2}>@rabuskebernardo</h2>
+        </div>
+        <div className={style.p}>
+            <p className={style.p1}>C</p>
+            <p className={style.p2}>P</p>
+            <p className={style.p3}>H</p>
+            <p className={style.mais}>+</p>
+        </div>
         {
             loading && <p>Carregando</p>
         }
         {
         posts.length === 0 && !loading ?
-            <p>Nada de novo aqui</p>
+            <p></p>
         : <ul className={style.ul}>
            {
              posts.map((post)=>{

@@ -4,10 +4,15 @@ import { Iconify } from "../iconify/Iconify"
 import style from "./style.module.css"
 
 interface HeaderProps{
-    hidden?:"config"|"home"|"mensage"
+    hidden?:"config"|"home"|"mensage"|"user"
 }
 
 export const Header =({hidden}:HeaderProps)=>{
+    let user = null
+    if(localStorage.getItem("user")){
+
+        user = JSON.parse(localStorage.getItem("user")!)
+    }
     return <header className={style.header}>
 <div className={style.TituloDiv}>
          <h1 className={style.Titulo}>The Script</h1>
@@ -17,18 +22,22 @@ export const Header =({hidden}:HeaderProps)=>{
         </fieldset>
 </div>
         <nav className={style.nav}>
-             <Link to="/"> 
+             {hidden != "home" && <Link to="/"> 
              <Iconify icon="bi:houses-fill"/>
-             </Link> 
+             </Link> }
 
             {hidden != "config" && <Link to="/configuracao">
-            <Iconify icon="line-md:cog-loop"/>
+            <Iconify icon="fa6-solid:user-gear"/>
             </Link>}
 
-         <Link to="/mensagens">
+         {hidden != "mensage" && <Link to="/mensagens">
          <Iconify icon="streamline-pixel:email-mail-chat"/>
-         </Link>
+         </Link>}
             
+            {hidden != "user" && user && <Link to={`/usuario/${user.id}`}>
+            <Iconify icon="ion:people-circle-outline"/>
+            </Link>}
+
         </nav>
     </header>
 }

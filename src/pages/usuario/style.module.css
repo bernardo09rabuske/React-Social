@@ -1,0 +1,34 @@
+.main{
+
+    padding: 20px;
+    /* width: 65%; */
+    display: flex;
+    gap: 80px;
+    padding-left: 72px;
+}
+
+.img{
+    padding: 32px;
+    background-color: #ffffff;
+    width: max-content;
+    border-radius: 50%;
+    border: solid #02a807;
+    
+}
+.profile {
+    display: flex;
+    align-items: flex-start;
+    width: 65%;
+    background-color: #ffffff;
+}
+.posts{
+    display:flex;
+    align-items: end;
+    
+}
+.feedReal {
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    padding: 12px;
+    padding-left: 20px;
+}
